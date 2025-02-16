@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $order_id = generateOrderID();
-    $amount = $service['price_per_post'] * 1.1; // Harga termasuk pajak
+    $amount = round($service['price_per_post'] * 1.1); // Harga termasuk pajak
     $status = "pending";
 
     // Simpan transaksi ke database
